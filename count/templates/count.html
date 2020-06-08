@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+</head>
+<body>
+<h1>
+    count
+
+</h1>
+<p>to start counting again press below button</p>
+<a href="{% url 'home' %}"><button>Start Again</button></a>
+<p>total words are {{count}}</p>
+<h3>Fulltext:<br/>{{fulltext}}</h3>
+<h3>Individual word count</h3>
+{% for word,wordcount in dict %}
+<li/>{{word}}-{{wordcount}}
+{% endfor %}
+</body>
+</html>
